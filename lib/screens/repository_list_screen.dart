@@ -24,6 +24,10 @@ class RepositoryListScreen extends StatelessWidget {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Failed to load repositories')),
             );
+          }else if (state is RepositoryLoadSuccess) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Repositories refreshed successfully')),
+            );
           }
         },
         builder: (context, state) {
