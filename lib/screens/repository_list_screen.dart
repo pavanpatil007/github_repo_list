@@ -26,7 +26,7 @@ class RepositoryListScreen extends StatelessWidget {
             );
           }else if (state is RepositoryLoadSuccess) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Repositories refreshed successfully')),
+              const SnackBar(content: Text('Repositories refreshed successfully')),
             );
           }
         },
